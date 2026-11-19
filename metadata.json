@@ -1,0 +1,6 @@
+{
+  "name": "Apex Motors",
+  "description": "Curated luxury and performance vehicles, transparent pricing, and bespoke acquisition services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

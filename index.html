@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Motors — Drive Something Exceptional</title>
+    <meta name="description" content="Curated luxury and performance vehicles, transparent pricing, and bespoke acquisition services." />
+    <meta property="og:title" content="Apex Motors — Drive Something Exceptional" />
+    <meta property="og:description" content="Curated luxury and performance vehicles, transparent pricing, and bespoke acquisition services." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#top" class="brand-wordmark" id="brand-home-link">APEX MOTORS</a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <button type="button" class="nav-link" data-condition="ALL" data-scroll="featured-vehicles">Inventory</button>
+          <button type="button" class="nav-link" data-condition="NEW" data-scroll="featured-vehicles">New Cars</button>
+          <button type="button" class="nav-link" data-condition="PRE-OWNED" data-scroll="featured-vehicles">Pre-Owned</button>
+          <button type="button" class="nav-link" data-scroll="services">Services</button>
+          <button type="button" class="nav-link" data-scroll="about">About</button>
+          <button type="button" class="nav-link" data-modal="contact">Contact</button>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="btn btn-primary btn-header" data-modal="test-drive">
+            BOOK A TEST DRIVE
+          </button>
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+            <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-menu" class="mobile-drawer" hidden>
+        <button type="button" class="mobile-nav-link" data-condition="ALL" data-scroll="featured-vehicles">Inventory</button>
+        <button type="button" class="mobile-nav-link" data-condition="NEW" data-scroll="featured-vehicles">New Cars</button>
+        <button type="button" class="mobile-nav-link" data-condition="PRE-OWNED" data-scroll="featured-vehicles">Pre-Owned</button>
+        <button type="button" class="mobile-nav-link" data-scroll="services">Services</button>
+        <button type="button" class="mobile-nav-link" data-scroll="about">About</button>
+        <button type="button" class="mobile-nav-link" data-modal="contact">Contact</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <img
+          src="/assets/aistudio/3_5ae26796.png"
+          alt="Luxury supercars displayed in the Apex Motors showroom"
+          class="hero-bg"
+          referrerpolicy="no-referrer"
+        />
+        <div class="hero-scrim"></div>
+
+        <div class="hero-content reveal">
+          <h1 class="hero-title">DRIVE SOMETHING EXCEPTIONAL.</h1>
+          <p class="hero-subtitle">
+            Discover premium vehicles selected for people who expect more from every drive.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary hero-btn" data-scroll="featured-vehicles">
+              Explore Inventory
+            </button>
+            <button type="button" class="btn btn-hero-outline hero-btn" data-modal="test-drive">
+              Book a Test Drive
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">VEHICLES</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">2,500+</div>
+              <div class="stat-label">CUSTOMERS</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">YEARS EXPERIENCE</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overlapping Filter Search Bar -->
+      <section class="filter-section">
+        <div class="filter-card reveal">
+          <form id="filter-form" class="filter-grid">
+            <div class="filter-field">
+              <label for="filter-make" class="field-label">MAKE</label>
+              <div class="select-wrap">
+                <select id="filter-make" class="select-input">
+                  <option value="All Makes">All Makes</option>
+                  <option value="Rolls-Royce">Rolls-Royce</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Lamborghini">Lamborghini</option>
+                </select>
+                <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div class="filter-field">
+              <label for="filter-model" class="field-label">MODEL</label>
+              <div class="select-wrap">
+                <select id="filter-model" class="select-input">
+                  <option value="All Models">All Models</option>
+                  <option value="Apex GT Coupe">Apex GT Coupe</option>
+                  <option value="Executive Series RS">Executive Series RS</option>
+                  <option value="Terrain Master V8">Terrain Master V8</option>
+                </select>
+                <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div class="filter-field">
+              <label for="filter-body" class="field-label">BODY TYPE</label>
+              <div class="select-wrap">
+                <select id="filter-body" class="select-input">
+                  <option value="All Types">All Types</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Sedan">Sedan</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Electric">Electric</option>
+                </select>
+                <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div class="filter-field">
+              <label for="filter-price" class="field-label">PRICE RANGE</label>
+              <div class="select-wrap">
+                <select id="filter-price" class="select-input">
+                  <option value="Any Price">Any Price</option>
+                  <option value="Under $100,000">Under $100,000</option>
+                  <option value="$100,000 – $130,000">$100,000 – $130,000</option>
+                  <option value="$130,000+">$130,000+</option>
+                </select>
+                <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div class="filter-field">
+              <label for="filter-year" class="field-label">YEAR</label>
+              <div class="select-wrap">
+                <select id="filter-year" class="select-input">
+                  <option value="Any Year">Any Year</option>
+                  <option value="2024">2024</option>
+                  <option value="2022">2022</option>
+                </select>
+                <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary filter-submit-btn">SEARCH VEHICLES</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Featured Vehicles Section -->
+      <section id="featured-vehicles" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2 class="section-title">Featured Vehicles</h2>
+            <p class="section-subtitle">Exceptional cars. Carefully selected.</p>
+          </div>
+
+          <div id="vehicle-grid" class="vehicle-grid"></div>
+
+          <div id="vehicle-empty" class="empty-state reveal" hidden>
+            <p class="empty-text">No featured vehicles match the selected criteria.</p>
+            <button type="button" id="empty-reset-btn" class="btn btn-primary btn-reset">
+              RESET FILTERS
+            </button>
+          </div>
+
+          <div class="section-cta-center reveal">
+            <button type="button" id="reset-filters-btn" class="btn btn-outline">
+              VIEW ALL INVENTORY
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Browse by Category Section -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title category-heading reveal">Browse by Category</h2>
+
+          <div class="category-bento">
+            <div class="reveal category-sports-wrap">
+              <button type="button" class="category-card category-card-sports" data-category="Sports">
+                <img
+                  src="/src/assets/images/category_sports_1794919169214.jpg"
+                  alt="Sports vehicles in modern showroom"
+                  class="category-img"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="category-scrim"></div>
+                <div class="category-meta category-meta-lg">
+                  <div class="category-name category-name-lg">Sports</div>
+                  <div class="category-count">24 VEHICLES</div>
+                </div>
+              </button>
+            </div>
+
+            <div class="category-right-col">
+              <div class="category-top-row">
+                <div class="reveal" style="--reveal-delay: 80ms">
+                  <button type="button" class="category-card category-card-sm" data-category="Sedan">
+                    <img
+                      src="/src/assets/images/category_sedan_1794919169890.jpg"
+                      alt="Luxury Sedan vehicles"
+                      class="category-img"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div class="category-scrim"></div>
+                    <div class="category-meta category-meta-sm">
+                      <div class="category-name category-name-sm">Sedan</div>
+                      <div class="category-count category-count-sm">36 VEHICLES</div>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="reveal" style="--reveal-delay: 140ms">
+                  <button type="button" class="category-card category-card-sm" data-category="SUV">
+                    <img
+                      src="/src/assets/images/category_suv_1794919170655.jpg"
+                      alt="Luxury SUV vehicles"
+                      class="category-img"
+                      referrerpolicy="no-referrer"
+                    />
+                    <div class="category-scrim"></div>
+                    <div class="category-meta category-meta-sm">
+                      <div class="category-name category-name-sm">SUV</div>
+                      <div class="category-count category-count-sm">42 VEHICLES</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <div class="reveal category-electric-wrap" style="--reveal-delay: 180ms">
+                <button type="button" class="category-card category-card-wide" data-category="Electric">
+                  <img
+                    src="/src/assets/images/category_electric_1794919170524.jpg"
+                    alt="Electric luxury vehicles"
+                    class="category-img"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div class="category-scrim"></div>
+                  <div class="category-meta category-meta-md">
+                    <div class="category-name category-name-md">Electric</div>
+                    <div class="category-count">18 VEHICLES</div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Than a Showroom. Section -->
+      <section id="services" class="section section-alt">
+        <div class="container">
+          <div class="pillars-layout">
+            <div class="pillars-intro reveal">
+              <h2 class="pillars-title">More Than a Showroom.</h2>
+              <p class="pillars-copy">
+                We redefine the automotive purchasing experience through transparency, rigorous
+                standards, and uncompromising service.
+              </p>
+            </div>
+
+            <div class="pillars-grid">
+              <div class="pillar-item reveal" style="--reveal-delay: 50ms">
+                <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <h3 class="pillar-heading">Certified Vehicles</h3>
+                <p class="pillar-desc">
+                  Every vehicle undergoes a meticulous 150-point mechanical and cosmetic inspection
+                  by master technicians.
+                </p>
+              </div>
+
+              <div class="pillar-item reveal" style="--reveal-delay: 100ms">
+                <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="M10 9H8"></path>
+                  <path d="M16 13H8"></path>
+                  <path d="M16 17H8"></path>
+                </svg>
+                <h3 class="pillar-heading">Transparent Pricing</h3>
+                <p class="pillar-desc">
+                  No hidden fees or aggressive sales tactics. Just straightforward,
+                  market-reflective pricing on premium assets.
+                </p>
+              </div>
+
+              <div class="pillar-item reveal" style="--reveal-delay: 150ms">
+                <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="3" y1="22" x2="21" y2="22"></line>
+                  <line x1="6" y1="18" x2="6" y2="11"></line>
+                  <line x1="10" y1="18" x2="10" y2="11"></line>
+                  <line x1="14" y1="18" x2="14" y2="11"></line>
+                  <line x1="18" y1="18" x2="18" y2="11"></line>
+                  <polygon points="12 2 20 7 4 7"></polygon>
+                </svg>
+                <h3 class="pillar-heading">Flexible Financing</h3>
+                <p class="pillar-desc">
+                  Tailored financial solutions through our network of elite lending partners to suit
+                  your portfolio.
+                </p>
+              </div>
+
+              <div class="pillar-item reveal" style="--reveal-delay: 200ms">
+                <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                  <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"></path>
+                  <path d="m18 15-2-2"></path>
+                  <path d="m15 18-2-2"></path>
+                </svg>
+                <h3 class="pillar-heading">Personal Service</h3>
+                <p class="pillar-desc">
+                  A dedicated concierge manages your acquisition from initial inquiry to
+                  closed-carrier delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Apex Motors Section -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="split-grid">
+            <div class="split-media reveal">
+              <div class="media-frame">
+                <img
+                  src="/assets/aistudio/1_a163995a.png"
+                  alt="Apex Motors private indoor showroom"
+                  class="media-img"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </div>
+
+            <div class="split-copy split-copy-right reveal" style="--reveal-delay: 100ms">
+              <h2 class="section-title">Experience Apex Motors</h2>
+              <p class="split-text">
+                Our gallery is designed to provide an unhurried, private environment where you can
+                intimately explore the engineering and craftsmanship of our collection.
+              </p>
+              <div class="split-actions">
+                <button type="button" class="btn btn-primary btn-split" data-modal="showroom">
+                  VISIT OUR SHOWROOM
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Make Your Next Move. Section -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="split-grid split-grid-reverse-mobile">
+            <div class="split-copy reveal">
+              <h2 class="section-title">Make Your Next Move.</h2>
+              <p class="split-text">
+                Structure your acquisition with precision. Access competitive rates and bespoke terms
+                designed for high-net-worth individuals and corporate entities.
+              </p>
+              <div class="split-actions-row">
+                <button type="button" class="btn btn-primary btn-split" data-modal="calculator">
+                  CALCULATE PAYMENT
+                </button>
+                <button type="button" class="btn btn-outline btn-split" data-modal="financing">
+                  LEARN ABOUT FINANCING
+                </button>
+              </div>
+            </div>
+
+            <div class="split-media reveal" style="--reveal-delay: 100ms">
+              <div class="media-frame">
+                <img
+                  src="/assets/aistudio/4_6a872792.png"
+                  alt="Luxury handcrafted vehicle cockpit and steering wheel"
+                  class="media-img"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <img
+          src="/assets/aistudio/5_599451d2.png"
+          alt="Close-up monochrome steering wheel detail"
+          class="testimonials-bg"
+          referrerpolicy="no-referrer"
+        />
+        <div class="testimonials-scrim"></div>
+
+        <div class="container testimonials-inner">
+          <h2 class="testimonials-title reveal">FEEL IT BEFORE YOU BUY IT.</h2>
+
+          <div class="testimonials-grid">
+            <blockquote class="testimonial-card reveal" style="--reveal-delay: 50ms">
+              <div>
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <p class="testimonial-quote">
+                  “An immaculate collection and a completely seamless transaction. The team at Apex
+                  understands the value of time and transparency.”
+                </p>
+              </div>
+              <footer class="testimonial-author">— JAMES R., DIRECTOR</footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card reveal" style="--reveal-delay: 120ms">
+              <div>
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <p class="testimonial-quote">
+                  “They curated exactly what I was looking for. The showroom feels more like a
+                  private gallery than a dealership. Highly recommended.”
+                </p>
+              </div>
+              <footer class="testimonial-author">— SARAH T., ARCHITECT</footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card reveal" style="--reveal-delay: 190ms">
+              <div>
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <p class="testimonial-quote">
+                  “The financing process was discrete and incredibly efficient. The condition of the
+                  vehicle exceeded my already high expectations.”
+                </p>
+              </div>
+              <footer class="testimonial-author">— MICHAEL C., PARTNER</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA Section -->
+      <section class="closing-cta-section">
+        <div class="closing-cta-inner reveal">
+          <h2 class="closing-cta-title">YOUR NEXT CAR IS WAITING.</h2>
+          <div class="closing-cta-actions">
+            <button type="button" class="btn btn-primary btn-closing" data-condition="ALL" data-scroll="featured-vehicles">
+              BROWSE INVENTORY
+            </button>
+            <button type="button" class="btn btn-outline btn-closing" data-modal="contact">
+              CONTACT US
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid reveal">
+          <div class="footer-brand-col">
+            <div class="footer-brand">APEX MOTORS</div>
+            <div class="footer-copy">
+              © 2024 APEX MOTORS.<br />
+              ENGINEERED FOR PRECISION.
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <button type="button" class="footer-link" data-condition="ALL" data-scroll="featured-vehicles">Inventory</button>
+            <button type="button" class="footer-link" data-condition="NEW" data-scroll="featured-vehicles">New Cars</button>
+            <button type="button" class="footer-link" data-condition="PRE-OWNED" data-scroll="featured-vehicles">Pre-Owned</button>
+          </div>
+
+          <div class="footer-links-col">
+            <button type="button" class="footer-link" data-scroll="services">Services</button>
+            <button type="button" class="footer-link" data-scroll="about">About</button>
+            <button type="button" class="footer-link" data-modal="contact">Contact</button>
+          </div>
+
+          <div class="footer-links-col footer-legal-col">
+            <button type="button" class="footer-link" data-modal="privacy">Privacy Policy</button>
+            <button type="button" class="footer-link" data-modal="terms">Terms of Service</button>
+            <button type="button" class="footer-link" data-modal="hours">Showroom Hours</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Modal -->
+    <div id="modal-overlay" class="modal-overlay" hidden aria-hidden="true">
+      <div id="modal-dialog" class="modal-dialog" role="dialog" aria-modal="true">
+        <button type="button" id="modal-close" class="modal-close" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
